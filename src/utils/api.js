@@ -27,10 +27,10 @@ export async function getLinks() {
     const links = await storyblokApi.getAll('cdn/links', {
       version: isPreview() ? 'draft' : 'published',
     })
-    return links
+    return links || []
   } catch (error) {
     console.error(`Error fetching links:`, error)
-    return null
+    return []
   }
 }
 
