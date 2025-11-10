@@ -35,11 +35,37 @@ if (liveStory) {
 // Handle null story - create a default page structure
 if (!story || !story.content) {
   console.warn(`No story found for slug: ${slug || 'home'}`)
+
+  // Create default page content with hero and business sections
+  const defaultBody = slug === 'home' || !slug ? [
+    {
+      component: 'raiou_hero',
+      _uid: 'hero-1',
+      title: language === 'ja' ? 'グローバルパートナー莱歐' : 'Raiou Global Partner',
+      subtitle: language === 'ja'
+        ? '莱歐株式会社は、中日優質製品とサービスの深層提携を専門とし、医療・健康・運動・出行の包括的なソリューションを提供します。'
+        : 'Raiou specializes in deep partnerships of premium products and services between China and Japan, providing comprehensive solutions for healthcare, wellness, sports, and travel.',
+      badge: language === 'ja' ? 'グローバルパートナー' : 'Global Partner',
+    },
+    {
+      component: 'business_grid',
+      _uid: 'business-1',
+    },
+    {
+      component: 'certifications_section',
+      _uid: 'certifications-1',
+    },
+    {
+      component: 'contact_section',
+      _uid: 'contact-1',
+    }
+  ] : []
+
   story = {
     content: {
       component: 'page',
-      body: [],
-      title: slug ? slug.charAt(0).toUpperCase() + slug.slice(1) : 'Home',
+      body: defaultBody,
+      title: slug ? slug.charAt(0).toUpperCase() + slug.slice(1) : language === 'ja' ? 'ホーム' : 'Home',
     }
   }
 }
