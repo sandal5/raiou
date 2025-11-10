@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+Mono+CJK+JP:wght@400;500;700&display=swap');
 
 @view-transition {
   navigation: auto;
@@ -36,21 +37,37 @@
 }
 
 @theme {
+  /* Fonts */
   --font-inter: "Inter", sans-serif;
   --font-adamina: "Adamina", sans-serif;
+  --font-noto-jp: "Noto Sans JP", "Yu Gothic", "ヒラギノ角ゴ Pro", sans-serif;
+  --font-mono-jp: "Noto Sans Mono CJK JP", monospace;
 
-  --color-background: #F4F5F5;
-  --color-foreground: #000;
+  /* Colors - Raiou Brand */
+  --color-background: #F9FAFB;
+  --color-foreground: #111827;
 
-  --color-primary: #193EAF;
+  --color-primary: #1F2937;
   --color-primary-foreground: #fff;
+  --color-primary-light: #374151;
+  --color-primary-dark: #0F172A;
+
+  --color-accent-red: #EF4444;
+  --color-accent-blue: #3B82F6;
+  --color-accent-amber: #F59E0B;
 
   --color-card: #FFF;
   --color-card-foreground: var(--color-foreground);
+  --color-card-border: #E5E7EB;
 
-  --color-muted: #595959;
+  --color-muted: #6B7280;
+  --color-muted-bg: #F3F4F6;
 
-  --color-border: #e3e3e333;
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+
+  --color-border: #E5E7EB;
 }
 
 html {
@@ -133,4 +150,87 @@ header {
   to {
     --angle: 1turn;
   }
+}
+
+/* Japanese Typography */
+body {
+  font-family: var(--font-noto-jp);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+}
+
+/* Headings - Japanese optimized */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-noto-jp);
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.1px;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.3;
+  margin: 1.5rem 0 1rem 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin: 1.25rem 0 0.875rem 0;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin: 1rem 0 0.75rem 0;
+}
+
+h4, h5, h6 {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0.875rem 0 0.5rem 0;
+}
+
+/* English text within Japanese content */
+body :lang(en), .en, [lang="en"] {
+  font-family: var(--font-inter), var(--font-noto-jp);
+}
+
+/* Code blocks */
+code, pre {
+  font-family: var(--font-mono-jp);
+}
+
+/* Links styling */
+a {
+  color: var(--color-accent-blue);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-accent-red);
+  text-decoration: underline;
+}
+
+/* Button and interactive elements */
+button, [role="button"], .button {
+  font-family: var(--font-noto-jp);
+  font-weight: 500;
+}
+
+/* Japanese punctuation handling */
+p {
+  margin: 1rem 0;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
+  h3 { font-size: 1.1rem; }
+  body { font-size: 0.95rem; }
 }
