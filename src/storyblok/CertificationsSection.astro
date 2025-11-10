@@ -1,0 +1,101 @@
+---
+const { blok } = Astro.props
+
+const certifications = [
+  {
+    id: 'iso-medical',
+    icon: '✓',
+    title: 'ISO 13485',
+    description: '医療機器品質管理システム国際標準',
+    color: 'blue',
+  },
+  {
+    id: 'gdp',
+    icon: '✓',
+    title: 'GDP認証',
+    description: '医薬品流通管理基準',
+    color: 'blue',
+  },
+  {
+    id: 'haccp',
+    icon: '✓',
+    title: 'HACCP',
+    description: '食品安全衛生管理基準',
+    color: 'green',
+  },
+  {
+    id: 'japan-cert',
+    icon: '✓',
+    title: '日本認証',
+    description: 'MHLW/PMDA承認',
+    color: 'amber',
+  },
+  {
+    id: 'china-cert',
+    icon: '✓',
+    title: '中国認証',
+    description: 'CFDA/NMPA承認',
+    color: 'red',
+  },
+  {
+    id: 'traceability',
+    icon: '✓',
+    title: 'トレーサビリティ',
+    description: '全程品質追跡システム',
+    color: 'blue',
+  },
+]
+
+const colorMap = {
+  blue: 'border-blue-200 bg-blue-50 text-blue-700',
+  green: 'border-green-200 bg-green-50 text-green-700',
+  amber: 'border-amber-200 bg-amber-50 text-amber-700',
+  red: 'border-red-200 bg-red-50 text-red-700',
+}
+---
+
+<section class="py-20 md:py-32 bg-white">
+  <div class="container mx-auto px-4">
+    <!-- Section header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
+        {blok.title || '資格認証・信頼の証'}
+      </h2>
+      <p class="text-xl text-muted max-w-2xl mx-auto">
+        {blok.description || '厳格な国際標準と複数の認証体系により、製品品質と安全性を保証しています。'}
+      </p>
+    </div>
+
+    <!-- Certifications grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+      {certifications.map((cert) => {
+        const colors = colorMap[cert.color as keyof typeof colorMap] || colorMap.blue
+        return (
+          <div class={`border-2 rounded-lg p-6 ${colors}`}>
+            <div class="flex items-start">
+              <div class="flex-shrink-0">
+                <div class="flex items-center justify-center h-10 w-10 rounded-full bg-current opacity-20">
+                  <span class="text-xl font-bold">{cert.icon}</span>
+                </div>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-bold mb-2">{cert.title}</h3>
+                <p class="text-sm opacity-75">{cert.description}</p>
+              </div>
+            </div>
+          </div>
+        )
+      })}
+    </div>
+
+    <!-- Commitment statement -->
+    <div class="bg-gradient-to-r from-primary to-primary-dark rounded-lg p-8 md:p-12 text-white text-center">
+      <h3 class="text-2xl font-bold mb-4">
+        品質への約束
+      </h3>
+      <p class="text-lg leading-relaxed max-w-2xl mx-auto">
+        莱歐株式会社は、中日双重認証体系を通じて、すべての製品とサービスが最高の品質基準を満たすことを保証します。透明性と信頼を基本に、お客様の安心と満足を第一優先としています。
+      </p>
+    </div>
+  </div>
+</section>

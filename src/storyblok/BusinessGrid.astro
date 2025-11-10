@@ -1,0 +1,104 @@
+---
+const { blok } = Astro.props
+
+const businesses = [
+  {
+    id: 'medical',
+    icon: '🏥',
+    title: '医用耗材',
+    subtitle: '守護健康，安心可信',
+    description: '日本権威資格企業との長期協力により、医療防護、臨床ケア、家庭健康監測のニーズに対応。',
+    features: ['中日双重認証', '品質追溯', '全程監管'],
+    link: '/medical',
+  },
+  {
+    id: 'supplements',
+    icon: '💊',
+    title: '保健品',
+    subtitle: '科学营养，品质守护',
+    description: '日本有名ブランドとの直供協力により、天然・安全・有効の原則を守り、高品質の健康製品を提供。',
+    features: ['原装正品', '全程可追溯', '科学認証'],
+    link: '/supplements',
+  },
+  {
+    id: 'badminton',
+    icon: '🏸',
+    title: 'ワイヤレスネット',
+    subtitle: '品质装备，专业体验',
+    description: '初心者から専門家まで、国際バドミントン規格に基づいた包括的な装備マトリックスを提供。',
+    features: ['全品類網羅', '高性價比', '専門サポート'],
+    link: '/badminton',
+  },
+  {
+    id: 'tourism',
+    icon: '✈️',
+    title: '日本旅游',
+    subtitle: '专业导航，贴心陪伴',
+    description: 'カスタマイズされた旅行プラン、ビザサポート、ホテル予約、24時間緊急対応で心からのサービスを実現。',
+    features: ['定制方案', '全方位服務', '24/7対応'],
+    link: '/tourism',
+  },
+]
+---
+
+<section class="py-20 md:py-32 bg-background">
+  <div class="container mx-auto px-4">
+    <!-- Section header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
+        {blok.title || '四大核心業務板塊'}
+      </h2>
+      <p class="text-xl text-muted max-w-2xl mx-auto">
+        {blok.description || '醫療・健康・運動・出行の包括的なソリューションで、品質生活をサポートします。'}
+      </p>
+    </div>
+
+    <!-- Business cards grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {businesses.map((business) => (
+        <a
+          href={business.link}
+          class="group relative overflow-hidden rounded-lg border border-card-border bg-card p-8 hover:shadow-lg transition-all duration-300"
+        >
+          <!-- Background accent -->
+          <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-accent-blue/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+          <!-- Content -->
+          <div class="relative z-10">
+            <div class="text-5xl mb-4">{business.icon}</div>
+
+            <h3 class="text-xl font-bold text-primary mb-2">
+              {business.title}
+            </h3>
+
+            <p class="text-accent-amber text-sm font-medium mb-3">
+              {business.subtitle}
+            </p>
+
+            <p class="text-muted text-sm leading-relaxed mb-4">
+              {business.description}
+            </p>
+
+            <!-- Features -->
+            <div class="space-y-2">
+              {business.features.map((feature) => (
+                <div class="flex items-center text-sm text-muted">
+                  <span class="w-1.5 h-1.5 bg-accent-blue rounded-full mr-2"></span>
+                  {feature}
+                </div>
+              ))}
+            </div>
+
+            <!-- Arrow indicator -->
+            <div class="mt-6 inline-flex items-center text-accent-blue font-medium group-hover:translate-x-2 transition-transform duration-300">
+              詳細を見る
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

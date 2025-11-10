@@ -62,6 +62,12 @@ export default defineConfig({
         advisers_section: 'storyblok/AdvisersSection',
         banner_cta: 'storyblok/BannerCta',
         site_settings: 'storyblok/siteSettings',
+        // Raiou custom components
+        raiou_hero: 'storyblok/RaiouHero',
+        business_grid: 'storyblok/BusinessGrid',
+        certifications_section: 'storyblok/CertificationsSection',
+        news_section: 'storyblok/NewsSection',
+        contact_section: 'storyblok/ContactSection',
       },
     }),
   ],
