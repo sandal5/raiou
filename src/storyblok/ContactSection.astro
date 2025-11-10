@@ -40,8 +40,8 @@ const { blok } = Astro.props
             </svg>
             <div>
               <div class="font-bold">電話</div>
-              <a href="tel:+81012345678" class="text-gray-200 hover:text-white transition-colors">
-                +81 (0)12-3456-7890
+              <a href={`tel:${blok.phone || '090-XXXX-XXXX'}`} class="text-gray-200 hover:text-white transition-colors">
+                {blok.phone || '090-XXXX-XXXX'}
               </a>
             </div>
           </div>
@@ -53,8 +53,16 @@ const { blok } = Astro.props
             <div>
               <div class="font-bold">所在地</div>
               <p class="text-gray-200">
-                〒100-0005<br/>
-                東京都千代田区丸の内1-1-1
+                {blok.address ? (
+                  <>
+                    {blok.address}
+                  </>
+                ) : (
+                  <>
+                    日本<br/>
+                    (詳細情報はお問合せください)
+                  </>
+                )}
               </p>
             </div>
           </div>
@@ -89,7 +97,7 @@ const { blok } = Astro.props
               type="text"
               required
               class="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-accent-blue transition-colors"
-              placeholder="山田太郎"
+              placeholder="お名前を入力してください"
             />
           </div>
 
@@ -99,7 +107,7 @@ const { blok } = Astro.props
               type="email"
               required
               class="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-accent-blue transition-colors"
-              placeholder="info@example.com"
+              placeholder="info@raiou.co.jp"
             />
           </div>
 
@@ -109,7 +117,7 @@ const { blok } = Astro.props
               required
               rows={4}
               class="w-full px-4 py-2 rounded-lg bg-white/5 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-accent-blue transition-colors resize-none"
-              placeholder="お問合せ内容をご記入ください"
+              placeholder="ご質問やご要望をお聞かせください"
             ></textarea>
           </div>
 

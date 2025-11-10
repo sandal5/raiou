@@ -8,7 +8,10 @@
       "Bash(gh auth status:*)",
       "Bash(gh repo create:*)",
       "Bash(gh repo:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm install)",
+      "WebFetch(domain:raiou.co.jp)"
     ],
     "deny": [],
     "ask": []

@@ -41,11 +41,9 @@ if (!story || !story.content) {
     {
       component: 'raiou_hero',
       _uid: 'hero-1',
-      title: language === 'ja' ? 'グローバルパートナー莱歐' : 'Raiou Global Partner',
-      subtitle: language === 'ja'
-        ? '莱歐株式会社は、中日優質製品とサービスの深層提携を専門とし、医療・健康・運動・出行の包括的なソリューションを提供します。'
-        : 'Raiou specializes in deep partnerships of premium products and services between China and Japan, providing comprehensive solutions for healthcare, wellness, sports, and travel.',
-      badge: language === 'ja' ? 'グローバルパートナー' : 'Global Partner',
+      title: 'グローバル品質パートナー',
+      subtitle: 'ライオウは中日間の最高品質なパートナーシップを実現します。医療、健康、スポーツ、旅行における、包括的で質の高いソリューションをお提供します。',
+      badge: 'プレミアムパートナー',
     },
     {
       component: 'business_grid',
@@ -65,7 +63,7 @@ if (!story || !story.content) {
     content: {
       component: 'page',
       body: defaultBody,
-      title: slug ? slug.charAt(0).toUpperCase() + slug.slice(1) : language === 'ja' ? 'ホーム' : 'Home',
+      title: slug ? slug.charAt(0).toUpperCase() + slug.slice(1) : 'ホーム',
     }
   }
 }

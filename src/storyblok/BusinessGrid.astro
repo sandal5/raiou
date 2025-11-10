@@ -5,38 +5,38 @@ const businesses = [
   {
     id: 'medical',
     icon: '🏥',
-    title: '医用耗材',
-    subtitle: '守護健康，安心可信',
-    description: '日本権威資格企業との長期協力により、医療防護、臨床ケア、家庭健康監測のニーズに対応。',
-    features: ['中日双重認証', '品質追溯', '全程監管'],
+    title: '医療用消耗品',
+    subtitle: 'より良い医療ケアを実現',
+    description: '中日間の医療品質パートナーシップにより、医療防護・臨床ケア・家庭健康監測のニーズに対応。日本基準による厳格な品質管理。',
+    features: ['日本品質基準', 'トレーサビリティ完備', '継続的サポート'],
     link: '/medical',
   },
   {
     id: 'supplements',
     icon: '💊',
-    title: '保健品',
-    subtitle: '科学营养，品质守护',
-    description: '日本有名ブランドとの直供協力により、天然・安全・有効の原則を守り、高品質の健康製品を提供。',
-    features: ['原装正品', '全程可追溯', '科学認証'],
-    link: '/supplements',
+    title: 'ウェルネス製品',
+    subtitle: '科学的栄養で健康をサポート',
+    description: '日本のトップブランドとの直接協力により、天然・安全・効果的の原則に基づいた高品質の健康製品をお届けします。',
+    features: ['自然由来成分', '安全認証済み', '科学的根拠'],
+    link: '/wellness',
   },
   {
     id: 'badminton',
     icon: '🏸',
-    title: 'ワイヤレスネット',
-    subtitle: '品质装备，专业体验',
-    description: '初心者から専門家まで、国際バドミントン規格に基づいた包括的な装備マトリックスを提供。',
-    features: ['全品類網羅', '高性價比', '専門サポート'],
-    link: '/badminton',
+    title: 'スポーツ用品',
+    subtitle: 'プロフェッショナルな装備',
+    description: '初心者からプロまで、国際バドミントン規格に対応した包括的なスポーツ装備を提供。品質と価値を兼ね備えています。',
+    features: ['国際規格準拠', '高性能', 'エキスパートサポート'],
+    link: '/sports',
   },
   {
     id: 'tourism',
     icon: '✈️',
-    title: '日本旅游',
-    subtitle: '专业导航，贴心陪伴',
-    description: 'カスタマイズされた旅行プラン、ビザサポート、ホテル予約、24時間緊急対応で心からのサービスを実現。',
-    features: ['定制方案', '全方位服務', '24/7対応'],
-    link: '/tourism',
+    title: '旅行サービス',
+    subtitle: 'カスタマイズされた日本体験',
+    description: 'ビザサポート、完全カスタマイズされた旅行プラン、ホテル予約、24時間緊急対応サービスで、心からの旅をお約束します。',
+    features: ['完全カスタマイズ', 'ビザサポート', '24時間対応'],
+    link: '/travel',
   },
 ]
 ---
@@ -46,10 +46,10 @@ const businesses = [
     <!-- Section header -->
     <div class="text-center mb-16">
       <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6">
-        {blok.title || '四大核心業務板塊'}
+        {blok.title || 'ライオウのサービス'}
       </h2>
       <p class="text-xl text-muted max-w-2xl mx-auto">
-        {blok.description || '醫療・健康・運動・出行の包括的なソリューションで、品質生活をサポートします。'}
+        {blok.description || '医療・健康・スポーツ・旅行における、包括的で質の高いサービスをお提供します。'}
       </p>
     </div>
 
