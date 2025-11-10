@@ -5,10 +5,18 @@ import Footer from '../components/Footer.astro'
 import { getDatasource } from '../utils/api'
 
 const { siteSettings, language, langSwitch, translate, blok } = Astro.props
-const seo = blok.metatags
+const seo = blok?.metatags || {}
 
-const colors = await getDatasource('colors')
-const primaryColor = colors.primary
+let primaryColor = '#1F2937' // default Raiou primary color
+
+try {
+  const colors = await getDatasource('colors')
+  if (colors?.primary) {
+    primaryColor = colors.primary
+  }
+} catch (error) {
+  console.warn('Failed to fetch colors datasource, using default color')
+}
 ---
 
 <!DOCTYPE html>

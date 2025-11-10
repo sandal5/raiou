@@ -1,7 +1,13 @@
 ---
 import { getTransLink } from '../utils/i18n'
 import { getHref } from '../utils/getHref'
-const { language, translate, siteSettings } = Astro.props
+const { language, translate, siteSettings = {} } = Astro.props
+
+// Default values
+const logoFilename = siteSettings.logo?.filename || '/favicon.svg'
+const logoAlt = siteSettings.logo?.alt || 'Raiou Logo'
+const companyDescription = siteSettings.company_description || 'Connected the best resources of China and Japan for quality living experience.'
+const phone = siteSettings.phone || '+81 (0)12-3456-7890'
 ---
 
 <footer class="w-full text-white bg-[#0F0F0F]">
@@ -10,7 +16,7 @@ const { language, translate, siteSettings } = Astro.props
       <div class="lg:col-span-2">
         <div class="flex items-center gap-3">
           <a href={getTransLink(language, `/`)}>
-            <img src={siteSettings.logo.filename} alt={siteSettings.logo.alt} />
+            <img src={logoFilename} alt={logoAlt} />
           </a>
           <!-- <div class="font-medium capitalize text-white">Company Name</div> -->
         </div>
@@ -19,7 +25,7 @@ const { language, translate, siteSettings } = Astro.props
       <div class="lg:col-span-3">
         <div class="mb-8">
           <h2 class="text-xl font-medium mb-4">{translate.companyDetails}</h2>
-          <p class="max-w-[415px] opacity-65">{siteSettings.company_description}</p>
+          <p class="max-w-[415px] opacity-65">{companyDescription}</p>
         </div>
 
         <address class="not-italic space-y-3">
@@ -32,7 +38,7 @@ const { language, translate, siteSettings } = Astro.props
                 <clipPath id="clip0_349_381"><rect width="16" height="16" fill="white" transform="translate(0 -0.000488281)"/></clipPath>
               </defs>
             </svg>
-            <a href="">{siteSettings.phone}</a>
+            <a href="">{phone}</a>
           </div>
           <div class="flex items-center gap-3">
             <svg class="w-4 h-4" viewBox="0 0 16 16" fill="none">

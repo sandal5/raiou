@@ -31,8 +31,23 @@ if (liveStory) {
 } else {
   story = await getStory(slug, language)
 }
+
+// Handle null story - create a default page structure
+if (!story || !story.content) {
+  console.warn(`No story found for slug: ${slug || 'home'}`)
+  story = {
+    content: {
+      component: 'page',
+      body: [],
+      title: slug ? slug.charAt(0).toUpperCase() + slug.slice(1) : 'Home',
+    }
+  }
+}
+
+// Handle null siteSettings
+const safeSettings = siteSettings?.content || {}
 ---
 
-<Layout blok={story.content} siteSettings={siteSettings.content} langSwitch={langSwitch} language={language} translate={translate}>
+<Layout blok={story.content} siteSettings={safeSettings} langSwitch={langSwitch} language={language} translate={translate}>
   <StoryblokComponent blok={story.content} language={language} translate={translate}  />
 </Layout>
