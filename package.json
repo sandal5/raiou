@@ -2,6 +2,9 @@
   "name": "astro-storyblok-finance-starter",
   "type": "module",
   "version": "0.0.1",
+  "engines": {
+    "npm": ">=10.0.0"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
