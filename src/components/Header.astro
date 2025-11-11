@@ -5,8 +5,8 @@ import LanguageSwitcher from './LanguageSwitcher.astro'
 const { language, translate, langSwitch, siteSettings = {} } = Astro.props
 
 // Default logo
-const logoFilename = siteSettings.logo?.filename || '/favicon.svg'
-const logoAlt = siteSettings.logo?.alt || 'Raiou Logo'
+const logoFilename = siteSettings.logo?.filename || '/logo.png'
+const logoAlt = siteSettings.logo?.alt || 'ライオウ株式会社'
 
 // Default navigation
 const navItems = siteSettings.navigation || []
