@@ -11,7 +11,15 @@
       "Bash(git push:*)",
       "Bash(npm run build:*)",
       "Bash(npm install)",
-      "WebFetch(domain:raiou.co.jp)"
+      "WebFetch(domain:raiou.co.jp)",
+      "Bash(git rm:*)",
+      "Bash(bun install:*)",
+      "Bash(npm install:*)",
+      "Bash(cat:*)",
+      "Bash(git log:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(tree:*)",
+      "Bash(tar:*)"
     ],
     "deny": [],
     "ask": []

@@ -1,0 +1,81 @@
+{
+  "main": [
+    {
+      "name": "ホーム",
+      "url": "/"
+    },
+    {
+      "name": "サービス",
+      "url": "/blog"
+    },
+    {
+      "name": "価格",
+      "url": "/pricing"
+    },
+    {
+      "name": "お問い合わせ",
+      "url": "/contact"
+    },
+    {
+      "name": "FAQ",
+      "url": "/faq"
+    }
+  ],
+  "footer": [
+    {
+      "name": "サービス",
+      "menu": [
+        {
+          "text": "医療用消耗品",
+          "url": "/blog"
+        },
+        {
+          "text": "健康製品",
+          "url": "/blog"
+        },
+        {
+          "text": "スポーツ用品",
+          "url": "/blog"
+        },
+        {
+          "text": "旅行サービス",
+          "url": "/blog"
+        }
+      ]
+    },
+    {
+      "name": "企業",
+      "menu": [
+        {
+          "text": "会社概要",
+          "url": "#"
+        },
+        {
+          "text": "価格",
+          "url": "/pricing"
+        },
+        {
+          "text": "お問い合わせ",
+          "url": "/contact"
+        }
+      ]
+    },
+    {
+      "name": "サポート",
+      "menu": [
+        {
+          "text": "FAQ",
+          "url": "/faq"
+        },
+        {
+          "text": "プライバシーポリシー",
+          "url": "/privacy-policy"
+        },
+        {
+          "text": "利用規約",
+          "url": "/terms-conditions"
+        }
+      ]
+    }
+  ]
+}

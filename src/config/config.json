@@ -1,0 +1,40 @@
+{
+  "site": {
+    "title": "ライオウ株式会社",
+    "base_url": "https://raiou.co.jp",
+    "base_path": "/",
+    "trailing_slash": false,
+    "favicon": "/images/favicon.png",
+    "logo": "/logo.png",
+    "logo_width": "200",
+    "logo_height": "70",
+    "logo_text": "ライオウ"
+  },
+
+  "settings": {
+    "pagination": 4,
+    "summary_length": 200
+  },
+
+  "nav_button": {
+    "enable": true,
+    "label": "お問い合わせ",
+    "link": "/contact"
+  },
+
+  "params": {
+    "contact_form_action": "#",
+    "footer_content": "ライオウは中日間の最高品質なパートナーシップを実現します。医療、健康、スポーツ、旅行における、包括的で質の高いソリューションをお提供します。",
+    "copyright": "© 2025 ライオウ株式会社. All rights reserved."
+  },
+
+  "metadata": {
+    "meta_author": "ライオウ株式会社",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "ライオウ株式会社 - グローバル品質パートナーシップ"
+  },
+  "google_tag_manager": {
+    "enable": false,
+    "gtm_id": "GTM-XXXXXX"
+  }
+}
