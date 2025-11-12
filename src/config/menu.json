@@ -6,7 +6,7 @@
     },
     {
       "name": "会社概要",
-      "url": "#about"
+      "url": "/about"
     },
     {
       "name": "サービス",
@@ -44,7 +44,7 @@
       "menu": [
         {
           "text": "会社概要",
-          "url": "#about"
+          "url": "/about"
         },
         {
           "text": "経営理念",
