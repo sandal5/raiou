@@ -5,20 +5,16 @@
       "url": "/"
     },
     {
-      "name": "サービス",
-      "url": "/blog"
+      "name": "会社概要",
+      "url": "#about"
     },
     {
-      "name": "価格",
-      "url": "/pricing"
+      "name": "サービス",
+      "url": "#services"
     },
     {
       "name": "お問い合わせ",
       "url": "/contact"
-    },
-    {
-      "name": "FAQ",
-      "url": "/faq"
     }
   ],
   "footer": [
@@ -48,11 +44,11 @@
       "menu": [
         {
           "text": "会社概要",
-          "url": "#"
+          "url": "#about"
         },
         {
-          "text": "価格",
-          "url": "/pricing"
+          "text": "経営理念",
+          "url": "#"
         },
         {
           "text": "お問い合わせ",
@@ -61,11 +57,11 @@
       ]
     },
     {
-      "name": "サポート",
+      "name": "情報",
       "menu": [
         {
-          "text": "FAQ",
-          "url": "/faq"
+          "text": "ニュース",
+          "url": "/blog"
         },
         {
           "text": "プライバシーポリシー",
