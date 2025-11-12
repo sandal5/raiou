@@ -1,7 +1,7 @@
 ---
 banner:
   title: グローバル品質パートナー
-  content: ライオウは中日間の最高品質なパートナーシップを実現します。<br/>医療、健康、スポーツ、旅行における、包括的で質の高いソリューションをお提供します。
+  content: 莱歐株式会社は中日間の最高品質なパートナーシップを実現します。<br/>医療、健康、スポーツ、旅行における、包括的で質の高いソリューションをお提供します。
   image: /images/banner-art.png
   button:
     enable: true
@@ -10,7 +10,7 @@ banner:
 
 # feature
 feature:
-  title: ライオウのサービス
+  title: 莱歐株式会社のサービス
   features:
     - name: "医療用消耗品"
       icon: "/images/code.svg"
@@ -34,7 +34,7 @@ feature:
 # services
 services:
   - title: "医療品質を世界基準で実現"
-    content: "ライオウの医療用消耗品部門は、日本の厳格な品質管理基準とグローバルな流通ネットワークを統合しています。医療機関から家庭まで、安全で信頼できる製品をお届けしています。ISO認証取得済み。"
+    content: "莱歐株式会社の医療用消耗品部門は、日本の厳格な品質管理基準とグローバルな流通ネットワークを統合しています。医療機関から家庭まで、安全で信頼できる製品をお届けしています。ISO認証取得済み。"
     images:
       - "/images/service-slide-1.png"
       - "/images/service-slide-2.png"
@@ -77,14 +77,14 @@ services:
 
 # workflow
 workflow:
-  title: "ライオウとのパートナーシップの流れ"
+  title: "莱歐株式会社とのパートナーシップの流れ"
   image: "/images/banner.png"
   description: "品質確保から納品まで、すべてのプロセスで最高水準をお約束します。"
 
 # call_to_action
 call_to_action:
   title: パートナーシップをはじめましょう
-  content: ライオウは、あなたのビジネスの成長を全力でサポートします。医療、健康、スポーツ、旅行のいずれのニーズでも、高品質なソリューションをご用意しています。
+  content: 莱歐株式会社は、あなたのビジネスの成長を全力でサポートします。医療、健康、スポーツ、旅行のいずれのニーズでも、高品質なソリューションをご用意しています。
   image: "/images/cta.png"
   button:
     enable: true
