@@ -1,12 +1,11 @@
 ---
-title: "Contact Us"
-description: "meta description"
+title: "お問い合わせ"
+description: "ライオウへのお問い合わせ"
 draft: false
 info:
-  title: Why you should contact us!
-  description: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit recusandae voluptates doloremque veniam temporibus porro culpa ipsa, nisi soluta minima saepe laboriosam debitis nesciunt.
+  title: お気軽にお問い合わせください
+  description: ライオウへのご質問、サービスに関するご相談、ビジネスパートナーシップのご提案など、お気軽にお問い合わせください。メールでのお返事となります。
   contacts:
-    - "phone: +88 125 256 452"
-    - "Mail: [info@bigspring.com](mailto:info@bigspring.com)"
-    - "Address: 360 Main rd, Rio, Brazil"
+    - "Mail: [ylg@raiou.co.jp](mailto:ylg@raiou.co.jp)"
+    - "Address: Japan"
 ---
